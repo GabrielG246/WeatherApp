@@ -1,0 +1,202 @@
+.weather__frame{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+    position: relative;
+
+    & .globe__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        & .globe__image{
+            width: 90%;
+            max-width: 300px;
+            border: solid 1px rgb(255, 255, 255);
+            border-radius: 50%;
+            background-color: rgb(5, 108, 131);
+            animation: globeScale 0.5s linear normal;
+        }
+
+        & .globe__text{
+            display: block;
+            white-space: nowrap;
+            text-align: center;
+            animation: typing 1s linear normal;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            margin: 15px 0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    }
+}
+
+
+
+@media (max-width: 899px) {
+    .weather__frame{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        animation: weatherFrameLoad 5s linear normal;
+
+        
+
+        & .weather__without_data{
+            margin-top: 80px;
+            width: 100%;
+        }
+    }
+    
+    .weatherDataContainer{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-top: 20px;
+        
+        & .cityName__container{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: 1/2;
+            grid-column: 1/11;
+            
+            
+            & .cityName{
+                font-size: 38px;
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                text-justify: center;
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 1px;
+        }
+        & .mapMarkerIcon{
+            font-size: 28px;
+            color: rgb(219, 219, 219);
+            margin-right: 8px;
+        }
+    }
+}
+
+    .cardContainer{
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        border-radius: 7px;
+        min-width: 280px;
+        width: 95%;
+        position: relative;
+        max-height: 270px;
+    }
+    
+    .forecastContainer{
+        border-radius: 10px;
+        margin-bottom: 5px;
+        display: flex;
+        width: 100%;
+        position: relative;
+        bottom: -100%;
+    }
+}
+
+
+@media (min-width: 900px){
+    .weather__frame{
+        width: 98%;
+        min-height: 98vh;
+        height: 100%;
+        padding: 30px 0 5px 0;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(2,auto);
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        & .weather__without_data{
+            grid-column: 1/3;
+            width: 100%;
+        }
+    }
+    .weather__form_container{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .weatherDataContainer{
+        width: 100%;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: 10% 90%;
+        padding: 15px 0 5px 0;
+        //border: solid 1px red;
+        
+        & .cityName__container{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: 1/2;
+            grid-column: 1/11;
+            margin-bottom: 10px;
+            
+            
+            & .cityName{
+                font-size: 38px;
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                text-justify: center;
+                display: flex;
+                flex-direction: column;
+                letter-spacing: 1px;
+            }
+            & .mapMarkerIcon{
+                font-size: 28px;
+                color: rgb(219, 219, 219);
+                margin-right: 8px;
+            }
+        }
+    }
+    .cardContainer{
+        grid-column: 2/6;
+        grid-row: 2/3;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        height: 65%;
+        margin-right: px;
+    }
+
+    .forecastContainer{
+        grid-column: 6/10;
+        grid-row: 2/3;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        display: flex;
+        height: 65%;
+    }
+    
+}
+
+
+//<=== ANIMATIONS ===>//
+@keyframes globeScale{
+    0%{transform: scale(0);}
+    75%{transform: scale(0.5);}
+    100%{transform: scale(1);}
+}
+
+@keyframes weatherFrameLoad{
+    0%{height: 0px;}
+    100%{height: 100%;}
+}
+
+@keyframes typing{
+    0%{scale: 0;}
+    100%{scale: 1;}
+}

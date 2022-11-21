@@ -1,0 +1,208 @@
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+.formContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @media (max-width:899px){
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}
+
+
+.sectionContainer{
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: sectionContainerLoad 2s linear normal;
+}
+
+
+
+.inputContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+
+
+    label{
+        position: absolute;
+        left: 0%;
+        top: -25px;
+        font-size: 20px;
+
+        & .labelIcon{
+            font-size: 16px;
+            color: dark;
+        }
+    }
+
+    p{
+        display: flex;
+        font-size: 13px;
+        position: absolute;
+        left: 0px;
+        bottom: -20px;
+    }
+
+
+}
+
+
+.searchContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border-radius: 2px;
+    padding: 0 5px;
+    font-weight: 100;
+    position: relative;
+
+
+    &:focus{
+        outline: 2px solid gray;
+    }
+
+
+    & .searchIcon{
+        font-weight: lighter;
+        color: gray;
+    }
+
+    & .submitButton{
+        border: solid 0px;
+        border-left: solid 1px gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 4px;
+        padding-left: 4px;
+    }
+
+}
+
+//<===== BACKGROUND COLOR =====>//
+.labelDay{
+    color: white;
+}
+.labelDefault{
+    color: whitesmoke;
+}
+.labelNight{
+    color: whitesmoke;
+}
+
+//<===== INPUTS =====>//
+@mixin inputs {
+    width: 85%;
+    height: 29px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 15px;
+    border-radius: 10px;
+    background-color: white;
+    border: 0px;
+
+    &:focus{
+        outline: 0px;
+    }
+}
+
+@mixin suggestionContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px 0 10px;
+    //outline: solid 1px white;
+    max-height: 160px;
+    height: auto;
+    overflow-y: auto;
+    top: 80px;
+    background-color: white;
+    z-index: 100;
+    position: absolute;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    
+    & button{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: start;
+        height: 50px;
+        min-height: 50px;
+        border-radius: 0;
+        border: solid 0px;
+        border-top: 1px solid rgb(217, 207, 207);
+    }
+}
+
+.countryInput{
+    @include inputs()
+}
+.citiesInput{
+    @include inputs()
+}
+
+
+
+.countrySuggest{
+    @include suggestionContainer()
+}
+.citiesSuggest{
+    @include suggestionContainer()
+}
+.form__wait{
+    height: 80px;
+}
+
+@media (min-width: 900px){
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: space-evenly;
+    }
+    .sectionContainer{
+        width: 35%;
+        margin: 0 60px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@keyframes sectionContainerLoad{
+    0%{positon: relative; top: -1000px;}
+    50%{position: relative; top: 0px;}
+    100%{position: relative;}
+}
+
+

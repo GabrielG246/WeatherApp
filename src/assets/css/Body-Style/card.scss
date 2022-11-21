@@ -1,0 +1,122 @@
+.card__container{
+
+    margin-top: 25px;
+    padding: 0 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.card__climate{
+    width: 90%;
+    min-height: 200px;
+    backdrop-filter: blur(4px);
+    position: relative;
+    display: flex;
+    margin-bottom:60px ;
+    height: 230px;
+
+    & .card__today_data{
+        //backdrop-filter: blur(4px);
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        
+        & .card__icon{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: flex-end;
+            padding-top: 35px;
+            width: 50%;
+            height: 100%;
+
+
+            & .data__span{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row-reverse;
+                margin-bottom: 25px;
+
+                    & .icon-style{
+                        font-size: 60px;
+                        margin: 0;
+                        color: white;
+                        margin-right: 5px;
+                    }
+            
+                    & .data__temp{
+                        font-size: 50px;
+                        margin: 0;
+                        font-family: 'Noto Sans Display', sans-serif;
+                        color: white;
+                        margin-left: 5px;
+                    }
+            }
+    
+            & .data__clime{
+                font-size: 20px;
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                letter-spacing: 1px;
+    
+                &::first-letter{
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        & .card__today_spec{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100%;
+            width: 50%;
+            padding-left: 10px;
+            margin-left: 20px;
+
+            & .data__min{
+                font-family: 'Montserrat', sans-serif;
+                right: 10px;
+                color: white;
+                font-size: 20px;
+            }
+            & .data__max{
+                font-family: 'Montserrat', sans-serif;
+                left: 10px;
+                color: white;
+                font-size: 20px;
+            }
+            & .data__hum{
+                font-family: 'Montserrat', sans-serif;
+                left: 10px;
+                color: white;
+                font-size: 20px;
+            }
+            & .data__pre{
+                font-family: 'Montserrat', sans-serif;
+                left: 10px;
+                color: white;
+                font-size: 20px;
+            }
+        }
+
+
+
+
+
+
+    }
+}
+
+
+@media (max-width: 899px){
+    .card{
+
+    }
+}

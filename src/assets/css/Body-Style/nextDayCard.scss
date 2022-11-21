@@ -1,0 +1,133 @@
+.nd__component{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+
+.nd__container{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+
+
+    & .card{
+        width: 100%;
+        height: 100%;
+
+        & h3{
+            color: whitesmoke;
+
+        }
+        & .icon{
+            color: whitesmoke;
+
+        }
+        & .maxTemp{
+            color: whitesmoke;
+
+        }
+        & .minTemp{
+            color: whitesmoke;
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:899px){
+    .nd__component{
+        width: 85%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 7px;
+    }
+    
+    
+    .nd__container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        & h3{
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        & .icon{
+            font-size: 30px;
+            margin: 5px 0;
+        }
+        & .maxTemp{
+            text-align: start;
+        }
+        & .minTemp{
+            text-align: start;
+            margin-top: 8px;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width:900px){
+    .card{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(8, 12.5%);
+        align-items: center;
+
+
+        & h3{
+            grid-column: 1/2;
+            grid-row:2/3;
+            width: 100%;
+            text-align: center;
+            font-size: 25px;
+        }
+        & .icon{
+            grid-row:4/5;
+            grid-column: 1/2;
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+        }
+        & .maxTemp{
+            grid-row:7/8;
+            grid-column: 1/2;
+            width: 100%;
+            text-align: center;
+        }
+        & .minTemp{
+            grid-row:6/7;
+            grid-column: 1/2;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+}
