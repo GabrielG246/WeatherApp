@@ -5,6 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm run jsonServer`
+Before to run 'npm start' is neccesary run 'npm run jsonServer' to start the server.
 
 ### `npm start`
 
