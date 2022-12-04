@@ -45,7 +45,7 @@ const NextDayCard= ({loadingData, showData, forecast, indexCard})=>{
         //<--- Return de number of day --->//
         function nextDayNumber(day, idc){
             if(day+idc+1 > daysOfMonths(actualMonth, actualYear)){
-                return (indexCard+1)   
+                return day+idc+1-daysOfMonths(actualMonth, actualYear)
             } else {
                 return (day+indexCard+1)
             }
@@ -53,15 +53,12 @@ const NextDayCard= ({loadingData, showData, forecast, indexCard})=>{
     
 
         forecastList.map((forecastObj)=>{
-
-
             if(Number(forecastObj.dt_txt.slice(8,10)) === nextDayNumber(dateDay, indexCard)){
                 allForecastSelected.push(forecastObj);
             }
         })
         console.log(allForecastSelected)
 
-        //<----> Save the day forecast data <---->//
         //<====GET MAX TEMP====>//
         let allMaxTemps=[]
         let cleanListMaxTemp;
@@ -80,24 +77,19 @@ const NextDayCard= ({loadingData, showData, forecast, indexCard})=>{
         cleanListMinTemp= allMinTemps.sort((a,b)=> a - b)
         forecastSelected.push({minTemp: cleanListMinTemp[0]})
 
-
-
         let mediumForecastIndex= allForecastSelected.length / 2;
         let mediumForecast= allForecastSelected[mediumForecastIndex]
         forecastSelected.push(mediumForecast);
 
-    
-
         //<----> Search and identify the day and the icon of forecast <---->//
         if(forecastSelected.length>0){
         openWeatherUrl= "http://openweathermap.org/img/w/";
+        console.log(forecastSelected[2].weather[0])
         iconUrl= openWeatherUrl + forecastSelected[2].weather[0].icon + ".png";
         forecastDay= new Date(forecastSelected[2].dt_txt).getDay()
         actualDay= allDays[forecastDay]
         nextDayForecast= forecastSelected[2]
         }
-
-        //forec.dt_txt.split(" ")[1]
 
     } 
     const weatherDescriptions=[
@@ -150,12 +142,8 @@ const NextDayCard= ({loadingData, showData, forecast, indexCard})=>{
 
                     </div>
                 </div>
-
-
                 :
                 null
-                //<div class="lds-ripple"><div></div><div></div></div>
-
             }
         </div>
     )

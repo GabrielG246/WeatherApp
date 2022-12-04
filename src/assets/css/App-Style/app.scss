@@ -20,17 +20,29 @@
     transition-property: background;
     transition-duration: 2;
     background: linear-gradient(0deg, rgba(84,167,210,1) 0%, rgba(69,0,149,1) 100%);
+    background-image: url("../../img/cityBgD.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .appNight{
     transition-property: background;
     transition-duration: 2;
     background: linear-gradient(180deg, rgba(41,37,94,1) 0%, rgba(21,32,99,1) 50%, rgba(52,4,130,1) 100%);
+    background-image: url("../../img/cityBgN.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .appDefault{
     transition-property: background;
     transition-duration: 2;
     background: linear-gradient(0deg, rgba(84,167,210,1) 0%, rgba(68,35,255,1) 100%);
+    background-image: url("../../img/cityBgD.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 

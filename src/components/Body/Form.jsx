@@ -39,7 +39,7 @@ const Form= ({newLocation, bgColor}) =>{
     
     //<=== PEDIDO A LA API LOCAL ===>//
     useEffect( ()=> {
-    fetch("http://localhost:3005/citysData")
+    fetch("https://lunar-carnelian-columnist.glitch.me/citysData")
         .then((response)=>{
             return response.json();
         })

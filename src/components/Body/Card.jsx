@@ -80,7 +80,6 @@ const Card= ({loadingData, showData, weather})=> {
                 
                 :
                 null
-                //<div class="lds-ripple"><div></div><div></div></div>
             }
 
         </div>

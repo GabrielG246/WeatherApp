@@ -14,7 +14,6 @@
         & .globe__image{
             width: 90%;
             max-width: 300px;
-            border: solid 1px rgb(255, 255, 255);
             border-radius: 50%;
             background-color: rgb(5, 108, 131);
             animation: globeScale 0.5s linear normal;
@@ -92,9 +91,12 @@
         width: 95%;
         position: relative;
         max-height: 270px;
+        backdrop-filter: blur(1px);
+        background-color: rgba(69, 69, 69, 0.256);
     }
     
     .forecastContainer{
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         border-radius: 10px;
         margin-bottom: 5px;
         display: flex;

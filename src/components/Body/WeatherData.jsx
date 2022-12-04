@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons';
-import earthImg from '../../assets/img/earthImagev2.jpg'
+import earthImg from '../../assets/img/earthImagev5.jpg'
 
 import Form from './Form'
 import Card from './Card'
