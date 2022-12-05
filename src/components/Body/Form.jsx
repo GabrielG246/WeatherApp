@@ -39,7 +39,7 @@ const Form= ({newLocation, bgColor}) =>{
     
     //<=== PEDIDO A LA API LOCAL ===>//
     useEffect( ()=> {
-    fetch("https://principled-quasar-meteorology.glitch.me")
+    fetch("https://steadfast-silk-cat.glitch.me")
         .then((response)=>{
             return response.json();
         })
