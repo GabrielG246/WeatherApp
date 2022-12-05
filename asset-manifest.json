@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WeatherApp/static/css/main.4a109415.css",
-    "main.js": "/WeatherApp/static/js/main.92caa72f.js",
+    "main.css": "/WeatherApp/static/css/main.cce9cf59.css",
+    "main.js": "/WeatherApp/static/js/main.cc883a2d.js",
     "static/media/cityBgD.jpg": "/WeatherApp/static/media/cityBgD.b9ce2837f543a20dc53a.jpg",
     "static/media/cityBgN.jpg": "/WeatherApp/static/media/cityBgN.06c87a17fdf39f5fa97b.jpg",
     "static/media/weathericons-regular-webfont.svg": "/WeatherApp/static/media/weathericons-regular-webfont.1341a15172cec8dae06e.svg",
@@ -11,11 +11,11 @@
     "static/media/earthImagev5.jpg": "/WeatherApp/static/media/earthImagev5.6bee51f2415fb85b185f.jpg",
     "static/media/weathericons-regular-webfont.woff2": "/WeatherApp/static/media/weathericons-regular-webfont.e218aee6928fe3da9ed6.woff2",
     "index.html": "/WeatherApp/index.html",
-    "main.4a109415.css.map": "/WeatherApp/static/css/main.4a109415.css.map",
-    "main.92caa72f.js.map": "/WeatherApp/static/js/main.92caa72f.js.map"
+    "main.cce9cf59.css.map": "/WeatherApp/static/css/main.cce9cf59.css.map",
+    "main.cc883a2d.js.map": "/WeatherApp/static/js/main.cc883a2d.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a109415.css",
-    "static/js/main.92caa72f.js"
+    "static/css/main.cce9cf59.css",
+    "static/js/main.cc883a2d.js"
   ]
 }
