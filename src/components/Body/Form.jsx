@@ -165,8 +165,6 @@ const Form= ({newLocation, bgColor}) =>{
 
         <div className={`formContainer`}>
 
-            {fetchAlready===true?
-
             <form onSubmit={(e)=>{beforeSubmit(e)}}>
 
                 <div className='sectionContainer' id='sectionCountry'>
@@ -187,7 +185,7 @@ const Form= ({newLocation, bgColor}) =>{
                 </div>
 
 
-                {showCountrySuggest ?
+                {showCountrySuggest && fetchAlready===true?
                     <div className='countrySuggest'>
                     {filteredCountries.map((country)=>{
                         return(
@@ -238,7 +236,7 @@ const Form= ({newLocation, bgColor}) =>{
                     {diseabledCity ? <p className={bgColor==='appDay'?'labelDay':bgColor==='appNight'?'labelNight':'labelDefault'}>You must select a country</p> : <></>}
                 </div>
 
-                {showCitySuggest ?
+                {showCitySuggest && fetchAlready===true?
                     <div className='citiesSuggest'>
                     {filteredCities.map((city)=>{
                         return(
@@ -264,7 +262,7 @@ const Form= ({newLocation, bgColor}) =>{
             </form>
             :
             <span className='form__wait'></span>   
-        }
+        
         </div>
     )
 }
