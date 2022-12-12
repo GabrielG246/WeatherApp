@@ -261,8 +261,7 @@ const Form= ({newLocation, bgColor}) =>{
                 }
                 </div>
             </form>
-            :
-            <span className='form__wait'></span>   
+            
         
         </div>
     )
