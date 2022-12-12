@@ -180,7 +180,7 @@ const Form= ({newLocation, bgColor}) =>{
                         //onBlur={()=>{setShowCountrySuggest(false)}}
                         ref= {countryInputDOM}
                         placeholder='Buscar'
-                        disabled={fetchAlready}
+                        disabled={!fetchAlready}
                         />
                     </div>
                 </div>
